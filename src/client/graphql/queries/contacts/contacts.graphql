@@ -1,0 +1,13 @@
+query contacts {
+  data: Contacts {
+    id
+    user {
+      id
+      username
+      email
+      pictureUrl
+      status
+      socketId
+    }
+  }
+}

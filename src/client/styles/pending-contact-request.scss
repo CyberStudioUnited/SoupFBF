@@ -1,0 +1,32 @@
+@import './base';
+
+.pending-contact-request {
+  border-bottom: 1px solid $light-grey;
+  justify-content: space-between;
+  min-height: 56px;
+  padding: 3px 12px 3px 8px;
+  width: unquote('calc(100% - 20px)');
+
+  .responding-buttons {
+    align-items: flex-end;
+
+    .accept {
+      @include webchat-gradient('background', 10deg);
+      border-radius: 6px;
+      padding: 2px 6px;
+
+      * {
+        color: $white;
+      }
+    }
+  }
+
+  .loader-container {
+    height: 50px;
+    margin: {
+      right: 27px;
+      top: 4px;
+    }
+    transform: scale(.75);
+  }
+}

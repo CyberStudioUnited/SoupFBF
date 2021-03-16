@@ -1,0 +1,17 @@
+@import './base';
+
+.video-chat-available {
+  @include video-chat-background-gradient;
+  flex-direction: column;
+  position: relative;
+
+  .instructions {
+    color: $white;
+    font-size: 14px;
+    margin-bottom: 20px;
+
+    i {
+      color: $white;
+    }
+  }
+}

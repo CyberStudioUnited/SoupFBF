@@ -1,0 +1,34 @@
+@import './vars';
+
+@mixin calc($property, $string) {
+  #{$property}: unquote('calc(#{$string})');
+}
+
+@mixin ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin webchat-gradient($property, $deg) {
+  #{$property}: linear-gradient($deg, $webchat-orange, $webchat-magenta);
+}
+
+@mixin webchat-text {
+  @include webchat-gradient('background', 0deg);
+  -webkit-text-fill-color: transparent;
+  font-family: $montserrat;
+  -webkit-background-clip: text;
+}
+
+@mixin video-chat-background-gradient {
+  background: linear-gradient(0deg, $darker-grey, $dark-grey);
+}
+
+@mixin user-info-img {
+  border-radius: 50%;
+  border: 1px solid $webchat-magenta;
+  height: 40px;
+  margin-right: 10px;
+  width: 40px;
+}

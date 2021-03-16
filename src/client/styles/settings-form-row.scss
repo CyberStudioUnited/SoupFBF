@@ -1,0 +1,61 @@
+@import './base';
+
+.settings-form-row {
+  @include calc('width', '100% - 30px');
+  border-bottom: 1px solid $light-grey;
+  height: 70px;
+  padding: 15px;
+
+  .label {
+    margin-bottom: 5px;
+  }
+
+  .space-between {
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+    input {
+      background: none;
+      border-radius: 0;
+      border: 0;
+      border-bottom: 1px solid $webchat-orange;
+      border-bottom-width: 1px;
+      box-shadow: none;
+      padding: 5px 0;
+      width: 50%;
+
+      &:focus {
+        border-bottom-width: 2px;
+      }
+    }
+
+    .value {
+      @include ellipsis;
+      color: $darker-grey;
+      font-size: 14px;
+      max-width: 50%;
+    }
+
+    .edit-button {
+      border-radius: 15px;
+      height: 30px;
+      margin-right: 10px;
+      width: 40px;
+
+      &.cancel {
+        background: $hangup-gradient;
+      }
+
+      &.submit {
+        @include webchat-gradient('background', 15deg);
+        padding-left: 3px;
+      }
+
+      i {
+        color: $white;
+        font-size: 16px;
+      }
+    }
+  }
+}

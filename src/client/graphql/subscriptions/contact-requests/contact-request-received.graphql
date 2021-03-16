@@ -1,0 +1,10 @@
+subscription($userId: Int) {
+  requestReceived: ContactRequestReceived(userId: $userId) {
+    id
+    sender {
+      email
+      username
+      pictureUrl
+    }
+  }
+}

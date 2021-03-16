@@ -1,0 +1,11 @@
+subscription($forUserId: Int) {
+  messageCreated: MessageCreated(forUserId: $forUserId) {
+    id
+    threadId
+    body
+    readAt
+    senderId
+    shortenedBody
+    createdAt
+  }
+}

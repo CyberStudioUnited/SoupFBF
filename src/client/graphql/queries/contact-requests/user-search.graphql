@@ -1,0 +1,8 @@
+query contactRequestUsers($query: String) {
+  users: Users(query: $query) {
+    userid: id
+    username
+    email
+    pictureUrl
+  }
+}

@@ -1,0 +1,101 @@
+@import './base';
+
+.align-items-center {
+  align-items: center;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+}
+
+.display-flex {
+  display: flex;
+}
+
+.flex-center {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.full-height {
+  height: 100%;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.hide-on-desktop {
+  @media #{$desktop} {
+    display: none;
+  }
+}
+
+.hide-on-mobile {
+  @media #{$mobile} {
+    display: none;
+  }
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.position-relative {
+  position: relative;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.webchat-button,
+.hangup-button,
+.accept-button {
+  border-radius: 21px;
+  color: $white;
+  text-transform: uppercase;
+  font-size: 14px;
+  height: 35px;
+  width: 120px;
+
+  * {
+    color: $white;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      box-shadow: 0 0px 3px fade-out($grey, .5);
+    }
+  }
+
+  &:active {
+    box-shadow: inset 0px 2px 3px fade-out($grey, .9);
+  }
+}
+
+.webchat-button {
+  @include webchat-gradient('background', 15deg);
+}
+
+.hangup-button {
+  background: $hangup-gradient;
+}
+
+.accept-button {
+  background: $accept-gradient;
+}
+
+.webchat-text {
+  @include webchat-gradient('background', 0deg);
+  -webkit-text-fill-color: transparent;
+  font-family: $montserrat;
+  -webkit-background-clip: text;
+}

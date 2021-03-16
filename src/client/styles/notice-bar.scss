@@ -1,0 +1,29 @@
+@import './base';
+
+.notice-bar {
+  @include webchat-gradient('background', 220deg);
+  padding: 5px 0;
+  z-index: 5000;
+
+  &.shadow {
+    box-shadow: 0px 0px 3px fade-out($black, .7);
+  }
+
+  .notice {
+    flex-basis: 100%;
+    margin-left: 40px;
+
+    span {
+      color: $white;
+    }
+  }
+
+  .clear-notice {
+    width: 40px;
+
+    button {
+      color: $white;
+      font-size: 18px;
+    }
+  }
+}

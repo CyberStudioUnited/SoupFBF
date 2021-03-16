@@ -1,0 +1,26 @@
+@import './base';
+
+.video-chat-receiving-call {
+  @include video-chat-background-gradient;
+  position: relative;
+
+  .calling-contact {
+    img {
+      @include user-info-img;
+      height: 70px;
+      margin: 0 0 20px;
+      width: 70px;
+    }
+
+    .call-message {
+      color: $white;
+      font-size: 16px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .accept-button {
+      margin-right: 20px;
+    }
+  }
+}

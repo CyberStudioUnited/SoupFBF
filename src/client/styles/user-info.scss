@@ -1,0 +1,19 @@
+@import './base';
+
+.user-info {
+  img {
+    @include user-info-img;
+  }
+
+  .username {
+    @include ellipsis;
+    color: $darker-grey;
+  }
+
+  .grey-text {
+    @include ellipsis;
+    color: $grey;
+    font-size: 10px;
+    max-width: 100px;
+  }
+}

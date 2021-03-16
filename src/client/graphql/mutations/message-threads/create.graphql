@@ -1,0 +1,7 @@
+mutation createMessageThread($contactId: Int) {
+  result: CreateMessageThread(contactId: $contactId) {
+    success
+    message
+    threadId
+  }
+}

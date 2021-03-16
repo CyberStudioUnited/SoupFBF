@@ -1,0 +1,7 @@
+mutation appectContactRequest($requestId: Int) {
+  result: AcceptContactRequest(requestId: $requestId) {
+    success
+    message
+    username
+  }
+}

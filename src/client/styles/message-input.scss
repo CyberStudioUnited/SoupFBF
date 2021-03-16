@@ -1,0 +1,110 @@
+@import './base';
+
+
+.message-input-wrapper {
+  margin: { bottom: 50px; top: 12px }
+  padding: 10px;
+  position: relative;
+
+  .user-typing {
+    font-size: 12px;
+    margin: 5px 0 10px 8px;
+    position: absolute;
+    top: -19px;
+  }
+
+  .message-input {
+    @include calc('width', '100% - 24px');
+    align-items: flex-end;
+    background: $white;
+    border-radius: 25px;
+    border: 1px solid $light-grey;
+    padding: 8px 12px 8px;
+
+    textarea {
+      background: transparent;
+      border: 0;
+      box-sizing: border-box;
+      color: $dark-grey;
+      font-size: 14px;
+      outline: none  !important;
+      margin-bottom: 4px;
+      max-height: 150px;
+      resize: none;
+      width: 100%;
+    }
+
+    .message-send-button-container {
+      width: 30px;
+
+      button {
+        @include webchat-gradient('background', 0deg);
+        border-radius: 50%;
+        height: 30px;
+        padding: 0px 3px 0px 0px;
+        width: 30px;
+
+        i {
+          color: $white;
+        }
+
+        &:hover {
+          &:not(:disabled) {
+            box-shadow: 0px 0px 3px $light-grey;
+          }
+        }
+
+        &:disabled {
+          background: $light-grey;
+        }
+      }
+    }
+  }
+}
+
+// .message-input {
+//   background: $white;
+//   // border-top: 1px solid $light-grey;
+//   box-shadow: 0px -1px 3px $light-grey;
+//   min-height: 125px;
+//   padding: 8px 3px 6px 10px;
+
+//   textarea {
+//     color: $dark-grey;
+//     background: $background-grey;
+//     border-radius: 10px;
+//     border: 1px solid $light-grey;
+//     box-shadow: inset 0px 0px 3px $light-grey;
+//     font-size: 12px;
+//     max-height: 75px;
+//     outline: none  !important;
+//     padding: 4px;
+//     width: 88%;
+//   }
+
+//   .message-send-button-container {
+//     width: 12%;
+
+//     button {
+//       @include webchat-gradient('background', 0deg);
+//       border-radius: 50%;
+//       height: 30px;
+//       padding: 0px 3px 0px 0px;
+//       width: 30px;
+
+//       i {
+//         color: $white;
+//       }
+
+//       &:hover {
+//         &:not(:disabled) {
+//           box-shadow: 0px 0px 3px $light-grey;
+//         }
+//       }
+
+//       &:disabled {
+//         background: $light-grey;
+//       }
+//     }
+//   }
+// }
